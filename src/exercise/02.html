@@ -26,15 +26,21 @@
 
     const elementProps = {
       className: 'container',
-      children: [
-        React.createElement('span', null, 'Hello'),
-        ' ',
-        React.createElement('span', null, 'World'),
-      ],
     }
+
     const elementType = 'div'
 
-    const reactElement = React.createElement(elementType, elementProps)
+    const helloElement = React.createElement('span', null, 'Hello')
+    const worldElement = React.createElement('span', null, 'World')
+
+    const reactElement = React.createElement(
+      elementType,
+      elementProps,
+      helloElement,
+      ' ',
+      worldElement,
+    )
+
     ReactDOM.render(reactElement, rootElement)
 
     // 🐨 Please re-implement the regular document.createElement code above
